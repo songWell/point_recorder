@@ -1,7 +1,7 @@
 <package>
-    <name>point_cloud_transport_tutorial</name>
+    <name>point_cloud_recorder</name>
     <version>0.1.0</version>
-    <description> Tutorial for point_cloud_transport. </description>
+    <description> Tutorial for point_cloud_recorder. </description>
     <author> Jakub Paplham </author>
     <maintainer email="paplhjak@fel.cvut.cz">Jakub Paplham</maintainer>
     <license> BSD </license>

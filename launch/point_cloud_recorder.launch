@@ -1,0 +1,6 @@
+<launch>
+    <!-- Subscribed topics -->
+    <param name="record/topic" type="string" value= "/rslidar_points" />
+    <param name="/point_cloud_compress/draco/quantization_POSITION" type="int" value="16" />
+    <node pkg="point_cloud_recorder" type="recorder" name="recorder"  output="screen" required="true" clear_params="true"/>
+</launch>
