@@ -1,10 +1,10 @@
 <launch>
     <!-- Subscribed topics -->
-    <param name="decode/topic" type="string" value= "/rslidar_points" />
+<!--     <param name="decode/topic" type="string" value= "/rslidar_points" /> -->
     <arg name="bag_path"  default="./lidar.bag" />
 
     <node pkg="rosbag" type="play" name="play" output="screen" args="$(arg bag_path)"/>
-    <node pkg="point_cloud_recorder" type="decoder" name="decoder"  output="screen" required="true" clear_params="true" >
+    <node pkg="point_cloud_recorder" type="decoder" name="decoder"  output="screen" required="true" >
         <param name="point_cloud_transport" value="draco"/>
     </node>
 </launch>

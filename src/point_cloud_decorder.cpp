@@ -2,11 +2,26 @@
 #include <point_cloud_transport/point_cloud_transport.h>
 #include <sensor_msgs/PointCloud2.h>
 
+#include <pcl_conversions/pcl_conversions.h>
+#include <pcl/common/transforms.h>
+
+
+typedef pcl::PointXYZINormal PointType;
+
 ros::Publisher rs_pub;
 
 
 void Callback(const sensor_msgs::PointCloud2ConstPtr& msg)
 {
+//    pcl::PointCloud< PointType > pl_orig;
+//    pcl::fromROSMsg( *msg, pl_orig );
+//
+//    for ( int i = 0; i < pl_orig.points.size(); i++ )
+//    {
+//        printf( "[%d] (%.2f, %.2f, %.2f) \r\n", i, pl_orig.points[ i ].x, pl_orig.points[ i ].y,
+//                    pl_orig.points[ i ].z);
+//
+//    }
     rs_pub.publish(msg);
 //    std::cout << "Message received, number of points is: " << msg->width*msg->height << std::endl;
 }
